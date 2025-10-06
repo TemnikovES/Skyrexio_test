@@ -4,15 +4,16 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.MyPublicBotsPage;
 import utils.PropertyReader;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class BaseTest {
-
-    protected LoginPage loginPage;
-    protected HomePage homePage;
+    LoginPage loginPage = new LoginPage();
+    HomePage homePage = new HomePage();
+    MyPublicBotsPage myPublicBotsPage = new MyPublicBotsPage();
 
     @BeforeMethod
     public void setUp() {

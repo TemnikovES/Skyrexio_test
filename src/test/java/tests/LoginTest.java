@@ -26,6 +26,4 @@ public class LoginTest extends BaseTest {
                 PropertyReader.getProperty("Skyrexio.wrong.password"));
         assertTrue(loginPage.waitErrorMessage());
     }
-
-
 }

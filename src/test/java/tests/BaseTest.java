@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class BaseTest {
-    LoginPage loginPage = new LoginPage();
-    HomePage homePage = new HomePage();
-    MyPublicBotsPage myPublicBotsPage = new MyPublicBotsPage();
+    protected LoginPage loginPage;
+    protected HomePage homePage;
+    protected MyPublicBotsPage myPublicBotsPage;
 
     @BeforeMethod
     public void setUp() {
@@ -23,6 +23,7 @@ public class BaseTest {
         Configuration.browserSize = "1920x1080";
         loginPage = new LoginPage();
         homePage = new HomePage();
+        myPublicBotsPage = new MyPublicBotsPage();
     }
 
     @AfterMethod

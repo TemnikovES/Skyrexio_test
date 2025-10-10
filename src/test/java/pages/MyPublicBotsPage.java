@@ -16,22 +16,25 @@ public class MyPublicBotsPage {
         return this;
     }
 
-    public void  newPublicBot() {
+    public MyPublicBotsPage newPublicBot() {
         NEW_PUBLIC_BOT_BTN.should(Condition.exist)
                 .shouldBe(Condition.visible)
                 .click();
+        return this;
     }
 
-    public void comboboxClick() {
+    public MyPublicBotsPage comboboxClick() {
         COMBOBOX.should(Condition.exist)
                 .shouldBe(Condition.visible)
                 .click();
+        return this;
     }
 
-    public void publicBotClick() {
+    public MyPublicBotsPage publicBotClick() {
         PUBLIC_BOT.should(Condition.exist)
                 .shouldBe(Condition.visible)
                 .click();
+        return this;
     }
 
     public static boolean checkErrorMsg() {
